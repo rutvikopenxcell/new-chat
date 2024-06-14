@@ -18,7 +18,8 @@ use App\Http\Controllers\ChatController;
 
 Route::group(['middleware' => 'cors'], function () {
     Route::controller(ChatController::class)->group(function () {
-        Route::get('/', 'index')->name('contact');
+        Route::get('/chat', 'index')->name('chat.page');
+        Route::get('/', 'home')->name('home.page');
     });
 });
 
